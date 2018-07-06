@@ -1,0 +1,74 @@
+1) What is jmeter and How jmeter works
+2) What are samplers
+3) what are assertions
+- Response asseretion
+- size assertion
+- duration assertion
+
+4) what are listeners 
+- Simple data write
+- assertion results
+- graph results
+- view results in tree
+- summary and agrregate report and difference between them
+
+Diffrence between cacahe and cookies
+
+5)  HTTP COOKIE MANGER and detaied explanation from https://www.blazemeter.com/blog/http-cookie-manager-advanced-usage-a-guide
+6) Userdefined cookie
+7) save.ccokies ,,, name.prefix 
+
+adding cookie on test plan and thread level
+server and jmeter cookie
+clear cookie on each iteration - server cokies will get cleared on each iteration
+
+User defined variables
+HTTP request defaults
+
+
+
+var textValue= window.document.getElementById("pageTitle").textContent;
+
+Dynamic value capturing and saving it to file in tru client
+
+load runner online questions
+
+
+design studio for correlation
+loadruuner while recording and replaying
+once we creatre script autonaticaaly adds all files to script
+we can edit the script by addind some step -design->inseert in script
+step navigator - shows the entire vuser script in tabnular formnat.If we want to got to particular step of script just click on that partcilaur step and we will be there
+
+
+view->bookmark if we want to go to particular step in script we can go to that step and can click toggle bookmark. so that step will start dispalying in bookmark pane anbd wif we diuble click on that step it will automatically taked uys to that step
+thumbnails - to visully see the entire business process which got captured while recording
+
+We can change the browser realted setting from brwoser emulation menu in runtime settings.If we want to repay the script usinmg some other browser then we van modify this setting
+
+Parameters
+web_image_check
+
+Transactions-They are used to measure the time it takes to complete 1 or more actions of business process
+merging graphs with correlate function - no of users vs res time then we will get to know for any partricular transaction how it is behaving when no of users are increasing
+
+Report - Html report if we want to craete report from scenario
+High level and detailed report - It will show the worst performing URL amd more memory consuming URLS.Basicaally it has a lot of info
+Design studio tab - for correlation
+
+javascript is for browser to check wether password is coorect or not...So we will not record non HTML things bcz it will incresese the response times
+We will only focus on server processing time
+
+HTML based recording advance options - 
+1) User actions  - it will record all the user actions to different functions..ie.web image,web url,web submit data etc
+2) explicit URl only - it will put all the actions into web_url or web_submit _data in case of froms so it will be more raedaable
+ and do not recoed rhe non html documents aas it si related to browser.
+
+
+
+
+
+
+
+
+
