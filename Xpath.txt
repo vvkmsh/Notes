@@ -1,0 +1,111 @@
+1) why we need to correlate drop down
+- Bcz if drop down is dynmaic
+- Bcz if we have too much values
+
+Once correlation is done we can parametrize ordinal value to take random value from parameter
+
+2) How to print parameters using lr_otput_message
+lr_output_message("the parameter value is %s",lr_eval_string("{depart}"));
+
+Xpath-
+/*  -If we want to go inside any tags or class
+//a[text()='Standard reports'] - Basically for dropdowns if some text is visible we use text.If we go inside this text we can find the details of the drop down. Ex - //a[text()='Standard reports']/*
+
+
+//div[@class='panel-body']/table[2]/tbody/tr[1]//a[contains(text(),'Options')]/*
+-2nd table row 1 --(Used basically for tabels)
+
+
+table
+tbody
+tr
+
+************************************************
+How to capture dynamic value using tru client-
+1) We can use Evaluate JS on object and then point to that object)
+2) In the step argument select get property and in argument section select visisblr text and save it to a variable.
+Then the ouput will be saved to that variable and we can print directly that varibale.
+************************************************
+
+*****************************************************************
+If we want to extract only number or any charcter from the string captured we can use the below code-
+
+So this method is helpful only when some random value are created at the same location(i.e Report number is xyz) not like report scenario of below location.
+
+var outfile="C:\\PSC_ProdIssue.txt";
+var y="";
+var regex=/Request[\s*].(.*?)\s*has\s*been\s*submitted/;   (/defines start and end of regular expression)
+var match=regex.exec(x);   (x is the string which we are capturing using Evalute JS on object and using cerify option)
+y=match;     (We have to write the captured value to a string so that we can use it on IO.print function)
+IO.write(outfile,y,true,"UTF-8");
+                  or
+we can do it by using substring method if lb and rb are fixed
+Ex-var str = "Hello world!";
+var res = str.substring(1, 4);  (Extract from 1st index to 3rd ,4th will not be included) and Index will start from 0;
+*******************************************************************
+
+*************************************************
+Ocean Contact management issue-
+
+If we are creating some report using parameter then we need to catch the parameter to a variable and use that variable in javascript using ArgsContext which will used to deal with global variables. It is helpful where already suppose 1000 reports are there and we are not knowing we we craete report it will go to which location. So it is better to pass some value through parameter and capture that value and then we can click on the new report
+
+var y="kumar";
+var z=TC.getParam("Lastname");
+evalXPath("//a[text()='vivek kumar"+ArgsContext.z+"']");  ---9Format is we have to put double qoutes before and after + sign and object we can put in single quotes or if we are putting objects in double quotes we have to give backslash)
+     or
+evalXPath("//a[text()='vivek "+ArgsContext.y+""+ArgsContext.z+"']");
+
+ArgsContext- It is usedd when we are trying to access argumnets not in argument section but object section. It will store all javascript arguments into it.
+evalXpath - The evalXPath function can only be used in the Javascript object identification method, as part of the object identification code in the "Object" section of a step
+
+**************************************************
+
+1) How to find brekpint from throughput and response grpah
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

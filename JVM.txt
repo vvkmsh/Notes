@@ -1,0 +1,25 @@
+1) Thread scheduler
+
+https://dzone.com/articles/how-analyze-java-thread-dumps
+what is thread - https://www.journaldev.com/1079/multithreading-in-java
+
+***Daemon Thraed-a JVM will exit once the last non-jvm thread terminates. this means that if any of the threads you create is still running, the jvm will not shutdown. daemon threads are threads that do not prevent the JVM from shutting down. normally you'd use them for some background tasks which you dont want keeping your application up if the user requested it to shut down. Ex - Garbage collection
+(https://www.geeksforgeeks.org/daemon-thread-java/)
+
+
+User Thraed
+
+Thraed contention
+Thraed dump
+Thread pool - btwn app and jvm.conatiner which have all thraeds in it , when to stop when to run .
+Thraed status 
+Deadlock
+Thread synchronization - https://www.techopedia.com/definition/24349/thread-synchronization
+Connection pool - btwn web and app server
+
+Apserver,JVM,JVM mem,garbage collection
+
+Autoscaling
+
+
+

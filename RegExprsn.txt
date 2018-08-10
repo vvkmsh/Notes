@@ -1,0 +1,82 @@
+Learn from Regexone
+
+metacharacters-
+
+Regular expression - It is used to match the pattern from the given string.
+
+\d - any digit from 0-9
+
+. - can match any single character(letter,digit,whitespace..)
+
+[abc] - will only match a single a, b, or c letter and nothing else
+
+[^drp]an - match any three letter word ending with 'an' that does not start with 'd', 'r' or 'p'.
+
+dash - to indicate character range.
+Ex-1) [0-6] will only match any single digit character from zero to six, and nothing else.
+2) [A-Za-z0-9_] - This can be donated as \w (word character)
+
+{} - it is used in case of repititions of character.
+Ex -1) a{3} will match the a character exactly three times.
+2)  a{1,3} will match a charcter 1-3 times.
+
+* - to match any number of times
+Ex 1) \d* to match any number of digits.
+2) \d+ which ensures that the input string has at least one digit.
+
+Ex-  a+ (one or more a's), [abc]+ (one or more of any a, b, or c character).
+2) .* (zero or more of any character).
+3) aa+ - two or more a's.
+4) d* - zero or more d's.
+
+? - denotes optionality ( allows you to match either zero or one of the preceding character or group)
+Ex 1) ab?c will match either the strings "abc" or "ac" because the b is considered optional.
+
+Note -> dot and ? are special characters so we have to escape it using black slash to match the string.
+
+\s - It will match any of the whitespaces(newline,tab,space..)
+Ex - \s* - match white space for 0 or mre number of times.
+
+Note 2) One way to tighten our patterns is to define a pattern that describes both the start and the end of the line using the special ^ (hat) and $ (dollar sign) metacharacters.
+Ex- ^Mission:successfull$ - It will match only that string that starts with Mission and ends successfull.
+
+() - To extract any group of characters.
+Ex- ^(file.+)\.pdf$ - It will extract only characters within() parenthesis and which will start with file and end with pdf.
+
+\\ - It is used to ignore \ and spaces.
+
+Learn from Hexaware.com
+/IC to ignore the case
+/BIN to specify binary data
+/DIG to interpret the pound sign (#) as a wildcard for a single digit
+/ALNUM<case> to interpret the caret sign (^) as a wildcard for a single US–ASCII alphanumeric character.
+
+
+Ex- When we have dynamic LB and RB.
+OrderID1234=dynamicresponsedata1234
+OrderID3456=dynamicresponsedata3456
+OrderID8798=dynamicresponsedata8798
+
+Soln- OrderID\d*=([a-z]*)\d*  - It will match only value specified between the brackets.(This is using Regex)
+                                         or
+web_reg_save_param(“Correlation_1”, “LB/DIG= OrderID####\=”, “RB=####”, LAST);
+
+Ex - name="userSession" value="124027.388740381zDHQzfipiAiDDDDDDicHHpQfcif"/>\n<table border
+
+Soln - \"userSession\"\\ value=\"(.*?)\"/>\\\n<table\\ border  - \\ is used to escape \ and space.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
